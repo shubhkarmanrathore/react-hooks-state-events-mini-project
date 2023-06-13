@@ -1,6 +1,7 @@
 import React from "react";
 
-function Task({ text, category, deletedItem }) {
+
+function Tasks({ text, category, deletedItem }) {
   return (
     <div className="task">
       <div className="label">{category}</div>
@@ -12,4 +13,5 @@ function Task({ text, category, deletedItem }) {
   );
 }
 
-export default Task;
+
+export default Tasks;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoryFilter({ onButton, selectedButton, categories }) {
+function FilterCategory({ onButton, selectedButton, categories }) {
   return (
     <div className="categories">
       <h5>Category filters</h5>
@@ -20,4 +20,4 @@ function CategoryFilter({ onButton, selectedButton, categories }) {
   );
 }
 
-export default CategoryFilter;
+export default FilterCategory;

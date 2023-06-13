@@ -1,7 +1,8 @@
 import React from "react";
 import Task from "./Task";
 
-function TaskList({ tasks, deletedItem }) {
+
+function ListofTasks({ tasks, deletedItem }) {
   return (
     <div className="tasks">
       {tasks.map((task, index) => (
@@ -11,4 +12,5 @@ function TaskList({ tasks, deletedItem }) {
   );
 }
 
-export default TaskList;
+
+export default ListofTasks;

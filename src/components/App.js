@@ -9,7 +9,7 @@ function App() {
   const [categories] = useState(CATEGORIES);
   const [selectedCategoryButton, setSelectedCategoryButton] = useState("All");
 
-  function addNewItemtoList(newItem) {
+  function addListItems(newItem) {
     setTask([...task, newItem]);
   }
 
@@ -30,7 +30,7 @@ function App() {
         onButton={selectedCategoryButton}
         selectedButton={setSelectedCategoryButton}
       />
-      <NewTaskForm onTaskFormSubmit={addNewItemtoList} categories={categories} />
+      <NewTaskForm onTaskFormSubmit={addListItems} categories={categories} />
       <TaskList deletedItem={deletedItem} tasks={itemDisplayed} />
     </div>
   );

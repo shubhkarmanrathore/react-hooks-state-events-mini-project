@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function NewTaskForm({ onTaskFormSubmit, categories }) {
+function NewForm({ onTaskFormSubmit, categories }) {
   const [newItemFields, setNewItemFields] = useState({
     text: "",
     category: "Code",
   });
 
-  function handleFields(e) {
+  function FieldHandler(e) {
     const { name, value } = e.target;
     setNewItemFields({ ...newItemFields, [name]: value });
   }
@@ -21,12 +21,12 @@ function NewTaskForm({ onTaskFormSubmit, categories }) {
     >
       <label>
         Details
-        <input value={newItemFields.text} onChange={handleFields} type="text" name="text" />
+        <input value={newItemFields.text} onChange={FieldHandler} type="text" name="text" />
       </label>
 
       <label>
         Category
-        <select value={newItemFields.category} onChange={handleFields} name="category">
+        <select value={newItemFields.category} onChange={FieldHandler} name="category">
           {categories.map((category, index) => (
             <option key={index}>{category}</option>
           ))}
@@ -38,4 +38,4 @@ function NewTaskForm({ onTaskFormSubmit, categories }) {
   );
 }
 
-export default NewTaskForm;
+export default NewForm;
